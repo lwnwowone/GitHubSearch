@@ -10,12 +10,6 @@
 
 @implementation GitSearchAPIDataMeta
 
--(id)initWithJson:(NSString *)json{
-    self = [super init];
-    [self loadDataFromJSON:json];
-    return self;
-}
-
 -(ActionResult *)loadDataFromJSON:(NSString *)json{
     ActionResult *result = [ActionResult new];
     NSError *error;
@@ -56,11 +50,11 @@
     return result;
 }
 
--(NSString *)description{
-    NSString *firstPart = [NSString stringWithFormat:@"totalCount = %d", _totalCount];
-    NSString *secondPart = [NSString stringWithFormat:@"totalCount = %@", _incompleteResults?@"T":@"F"];
-    NSString *thridPart = [_items description];
-    return [NSString stringWithFormat:@"%@\n%@\n%@\n", firstPart, secondPart, thridPart];
-}
+//-(NSString *)description{
+//    NSString *firstPart = [NSString stringWithFormat:@"totalCount = %d", _totalCount];
+//    NSString *secondPart = [NSString stringWithFormat:@"totalCount = %@", _incompleteResults?@"T":@"F"];
+//    NSString *thridPart = [_items description];
+//    return [NSString stringWithFormat:@"%@\n%@\n%@\n", firstPart, secondPart, thridPart];
+//}
 
 @end

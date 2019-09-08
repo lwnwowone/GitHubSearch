@@ -36,8 +36,8 @@
     return result;
 }
 
--(NSString *)description{
-    return [NSString stringWithFormat:@"id = %ld\nstart = %ld\nname= %@\nlanguage= %@\nprojectHome= %@\n", _itemID, _starCount, _name, _language, _projectHome];
-}
+//-(NSString *)description{
+//    return [NSString stringWithFormat:@"{\nid = %ld\nstart = %ld\nname= %@\nlanguage= %@\nprojectHome= %@\n}", _itemID, _starCount, _name, _language, _projectHome];
+//}
 
 @end
