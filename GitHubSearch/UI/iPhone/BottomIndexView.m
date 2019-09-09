@@ -21,10 +21,12 @@
     self.backgroundColor = [UIColor whiteColor];
 
     _lbInfo = [UILabel new];
+    _lbInfo.accessibilityIdentifier = @"lb_page_info";
     _lbInfo.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_lbInfo];
     
     _btnPrevious = [UIButton new];
+    _btnPrevious.accessibilityIdentifier = @"btn_pre";
     [_btnPrevious setTitle:@"<" forState:UIControlStateNormal];
     [_btnPrevious setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [_btnPrevious setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
@@ -33,6 +35,7 @@
     [self addSubview:_btnPrevious];
     
     _btnNext = [UIButton new];
+    _btnNext.accessibilityIdentifier = @"btn_next";
     [_btnNext setTitle:@">" forState:UIControlStateNormal];
     [_btnNext setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [_btnNext setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];

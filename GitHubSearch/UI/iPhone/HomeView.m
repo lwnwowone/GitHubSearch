@@ -29,18 +29,21 @@
     _tfSearch = [UITextField new];
     _tfSearch.backgroundColor = [UIColor lightGrayColor];
     _tfSearch.placeholder = @"Input search key";
+    _tfSearch.accessibilityIdentifier = @"tfSearch";
     _tfSearch.autocorrectionType = UITextAutocorrectionTypeNo;
     _tfSearch.autocapitalizationType = UITextAutocapitalizationTypeNone;
     [_tfSearch addTarget:self action:@selector(textChanged) forControlEvents:UIControlEventEditingChanged];
     [self addSubview:_tfSearch];
     
     _indicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, SEARCH_FILED_HEIGHT, SEARCH_FILED_HEIGHT)];
+    _indicator.accessibilityIdentifier = @"loading_indicator";
     _indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
     _indicator.hidesWhenStopped = YES;
     _indicator.color = [UIColor grayColor];
     [self addSubview:_indicator];
 
     _tableView = [UITableView new];
+    _tableView.accessibilityIdentifier = @"data_list";
     [self addSubview:_tableView];
     
     _bottomIndexView = [BottomIndexView new];
