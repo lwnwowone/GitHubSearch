@@ -10,10 +10,11 @@
 #import "HomeView.h"
 #import "CommonMacros.h"
 #import "ObjectFactory.h"
-#import "HomeViewProtocal.h"
+#import "HomeViewProtocol.h"
 #import "GitSearchDataManager.h"
 #import "ViewUtil.h"
 #import "PorjectConfig.h"
+#import "ItemDetailsViewController.h"
 
 #define HOME_TABLE_CELL_ID @"home_cell_id"
 
@@ -25,12 +26,12 @@
 
 @implementation HomeViewController{
     @private GitSearchDataManager *dataManager;
-    @private UIView<HomeViewProtocal> *_homeView;
+    @private UIView<HomeViewProtocol> *_homeView;
     @private bool _isSearching;
 }
 
 -(void)loadView{
-    _homeView = (UIView<HomeViewProtocal> *)[ObjectFactory viewForProtocols:@[@protocol(HomeViewProtocal)]];
+    _homeView = (UIView<HomeViewProtocol> *)[ObjectFactory viewForProtocols:@[@protocol(HomeViewProtocol)]];
     self.view = _homeView;
 }
 
@@ -113,7 +114,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [_homeView.tableView deselectRowAtIndexPath:indexPath animated:true];
+    ItemDetailsViewController *itemVC = [ItemDetailsViewController new];
+    itemVC.dataMeta = [self->_items objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:itemVC animated:true];
 }
 
 @end

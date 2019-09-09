@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GitItemDataMeta.h"
 
-@protocol HomeViewProtocal <NSObject>
+@protocol HomeViewProtocol <NSObject>
 
 //Table for show data
 @property (nonatomic, strong) UITableView *tableView;
