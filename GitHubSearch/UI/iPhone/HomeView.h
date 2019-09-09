@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeViewProtocal.h"
-#import "IphoneViewProtocal.h"
+#import "HomeViewProtocol.h"
+#import "IphoneViewProtocol.h"
 
-@interface HomeView : UIView<HomeViewProtocal, IphoneViewProtocal>
+@interface HomeView : UIView<HomeViewProtocol, IphoneViewProtocol>
 
 @property (nonatomic, strong) UITableView *tableView;
 

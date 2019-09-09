@@ -30,7 +30,8 @@
 		45D6047C232579A800817548 /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D6047B232579A800817548 /* ViewUtil.m */; };
 		45D6047F232580E000817548 /* BottomIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D6047E232580E000817548 /* BottomIndexView.m */; };
 		A2F56CA5C2FC443B2729B32C /* libPods-GitHubSearchTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D9604431D03DF706F8476D /* libPods-GitHubSearchTests.a */; };
-		C7DD23B12325FCA3008630B8 /* ItemDtialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD23B02325FCA3008630B8 /* ItemDtialsViewController.m */; };
+		C7DD23B52325FFB3008630B8 /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD23B42325FFB3008630B8 /* ItemDetailsViewController.m */; };
+		C7DD23B823260009008630B8 /* ItemDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD23B723260009008630B8 /* ItemDetailsView.m */; };
 		CAC63E4481E66ED93CB4A18A /* libPods-GitHubSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AE4788C7A46BADAEF720B4 /* libPods-GitHubSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -80,12 +81,12 @@
 		45D6046523256E8600817548 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		45D6046623256E8600817548 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
 		45D6046723256E8600817548 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		45D6046A23256EA000817548 /* HomeViewProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewProtocal.h; sourceTree = "<group>"; };
-		45D6046B23256EB500817548 /* IphoneViewProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IphoneViewProtocal.h; sourceTree = "<group>"; };
+		45D6046A23256EA000817548 /* HomeViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewProtocol.h; sourceTree = "<group>"; };
+		45D6046B23256EB500817548 /* IphoneViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IphoneViewProtocol.h; sourceTree = "<group>"; };
 		45D6046F23256EFF00817548 /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		45D6047023256FA300817548 /* ObjectFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectFactory.h; sourceTree = "<group>"; };
 		45D6047123256FA300817548 /* ObjectFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectFactory.m; sourceTree = "<group>"; };
-		45D60478232574FA00817548 /* IpadViewProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IpadViewProtocal.h; sourceTree = "<group>"; };
+		45D60478232574FA00817548 /* IpadViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IpadViewProtocol.h; sourceTree = "<group>"; };
 		45D6047A232579A800817548 /* ViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
 		45D6047B232579A800817548 /* ViewUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 		45D6047D232580E000817548 /* BottomIndexView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomIndexView.h; sourceTree = "<group>"; };
@@ -93,8 +94,11 @@
 		51D43C7D9E647C662DB5FCC9 /* Pods-GitHubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.release.xcconfig"; sourceTree = "<group>"; };
 		685EDBFB8F5BA9BB14772F22 /* Pods-GitHubSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearchTests/Pods-GitHubSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		A9D9604431D03DF706F8476D /* libPods-GitHubSearchTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubSearchTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7DD23AF2325FCA3008630B8 /* ItemDtialsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDtialsViewController.h; sourceTree = "<group>"; };
-		C7DD23B02325FCA3008630B8 /* ItemDtialsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemDtialsViewController.m; sourceTree = "<group>"; };
+		C7DD23B22325FF64008630B8 /* ItemDetailsViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewProtocol.h; sourceTree = "<group>"; };
+		C7DD23B32325FFB3008630B8 /* ItemDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
+		C7DD23B42325FFB3008630B8 /* ItemDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
+		C7DD23B623260009008630B8 /* ItemDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailsView.h; sourceTree = "<group>"; };
+		C7DD23B723260009008630B8 /* ItemDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsView.m; sourceTree = "<group>"; };
 		E6AE4788C7A46BADAEF720B4 /* libPods-GitHubSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37108513809C5090CED1ABB /* Pods-GitHubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,9 +264,10 @@
 		45D6046323256E3E00817548 /* Protocal */ = {
 			isa = PBXGroup;
 			children = (
-				45D6046A23256EA000817548 /* HomeViewProtocal.h */,
-				45D6046B23256EB500817548 /* IphoneViewProtocal.h */,
-				45D60478232574FA00817548 /* IpadViewProtocal.h */,
+				45D6046A23256EA000817548 /* HomeViewProtocol.h */,
+				C7DD23B22325FF64008630B8 /* ItemDetailsViewProtocol.h */,
+				45D6046B23256EB500817548 /* IphoneViewProtocol.h */,
+				45D60478232574FA00817548 /* IpadViewProtocol.h */,
 			);
 			path = Protocal;
 			sourceTree = "<group>";
@@ -274,6 +279,8 @@
 				45D6046423256E8600817548 /* HomeView.m */,
 				45D6047D232580E000817548 /* BottomIndexView.h */,
 				45D6047E232580E000817548 /* BottomIndexView.m */,
+				C7DD23B623260009008630B8 /* ItemDetailsView.h */,
+				C7DD23B723260009008630B8 /* ItemDetailsView.m */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -290,8 +297,8 @@
 			children = (
 				45D6046723256E8600817548 /* HomeViewController.h */,
 				45D6046523256E8600817548 /* HomeViewController.m */,
-				C7DD23AF2325FCA3008630B8 /* ItemDtialsViewController.h */,
-				C7DD23B02325FCA3008630B8 /* ItemDtialsViewController.m */,
+				C7DD23B32325FFB3008630B8 /* ItemDetailsViewController.h */,
+				C7DD23B42325FFB3008630B8 /* ItemDetailsViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -454,13 +461,14 @@
 				457A8F972324D61500049EBB /* HttpUtil.m in Sources */,
 				457A8F9B2324D79800049EBB /* ActionResult.m in Sources */,
 				457A8F912324D4B100049EBB /* GitSearchDataManager.m in Sources */,
+				C7DD23B52325FFB3008630B8 /* ItemDetailsViewController.m in Sources */,
 				45C11E572324F37000CA0091 /* GitItemDataMeta.m in Sources */,
 				45D6046923256E8600817548 /* HomeViewController.m in Sources */,
 				45D6047C232579A800817548 /* ViewUtil.m in Sources */,
 				45D6047223256FA300817548 /* ObjectFactory.m in Sources */,
 				45C11E542324F36200CA0091 /* GitSearchAPIDataMeta.m in Sources */,
 				45D6046823256E8600817548 /* HomeView.m in Sources */,
-				C7DD23B12325FCA3008630B8 /* ItemDtialsViewController.m in Sources */,
+				C7DD23B823260009008630B8 /* ItemDetailsView.m in Sources */,
 				45D6046123256CAA00817548 /* ClassUtil.m in Sources */,
 				457A8F942324D4BB00049EBB /* HttpClient.m in Sources */,
 				45D6047F232580E000817548 /* BottomIndexView.m in Sources */,

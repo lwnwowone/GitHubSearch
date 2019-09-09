@@ -8,8 +8,8 @@
 
 #import "ObjectFactory.h"
 #import "ClassUtil.h"
-#import "IphoneViewProtocal.h"
-#import "IpadViewProtocal.h"
+#import "IphoneViewProtocol.h"
+#import "IpadViewProtocol.h"
 
 @implementation ObjectFactory
 
@@ -33,10 +33,10 @@
     
     NSString *deviceType = [[UIDevice currentDevice] model]; // for current device
     if([deviceType isEqualToString:@"iPhone"]){
-        [pArray addObject:@protocol(IphoneViewProtocal)];
+        [pArray addObject:@protocol(IphoneViewProtocol)];
     }
     else if([deviceType isEqualToString:@"iPad"]){
-        [pArray addObject:@protocol(IpadViewProtocal)];
+        [pArray addObject:@protocol(IpadViewProtocol)];
     }
     else{
         NSString *errMsg = [NSString stringWithFormat:@"There is no implementation view in current context, protocols = %@", protocols];

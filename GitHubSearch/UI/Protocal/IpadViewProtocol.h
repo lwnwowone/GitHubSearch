@@ -1,5 +1,5 @@
 //
-//  IphoneViewProtocal.h
+//  IpadViewProtocal.h
 //  GitHubSearch
 //
 //  Created by alanc on 09/09/2019.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-//For specific the view is made for iPhone
-@protocol IphoneViewProtocal <NSObject>
+//For specific the view is made for iPad
+@protocol IpadViewProtocol <NSObject>
 
 @end
