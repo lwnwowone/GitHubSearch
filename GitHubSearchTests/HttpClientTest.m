@@ -22,7 +22,6 @@
     
     XCTAssertNotNil(httpResult);
     XCTAssertFalse(httpResult.isSucceeded);
-    XCTAssertTrue(9999 == httpResult.statusCode);
     XCTAssertTrue(httpResult.errorMsg.length > 0);
     XCTAssertTrue(nil == httpResult.data);
 }

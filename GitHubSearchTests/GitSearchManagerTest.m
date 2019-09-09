@@ -30,7 +30,7 @@
     
     GitSearchDataManager *manager = [GitSearchDataManager new];
     manager.httpClient = mockClient;
-    ActionResult<GitSearchAPIDataMeta *> *searchResult = [manager searchWithKeyWord:@"cocoahttp"];
+    ActionResult<GitSearchAPIDataMeta *> *searchResult = [manager searchWithKeyWord:@"cocoahttp" page:1];
     
     XCTAssertTrue(searchResult.isSucceeded);
     XCTAssertTrue(27 == searchResult.data.totalCount);
