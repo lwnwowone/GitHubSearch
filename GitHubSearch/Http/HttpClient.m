@@ -23,11 +23,14 @@
 -(ActionResult<NSString *> *)sendRequest:(NSURLRequest *)request{
     __block ActionResult<NSString *> *httpResult = [ActionResult new];
     httpResult.errorMsg = @"unhandled http request error";
+    NSLog(@"------------------- http request will start -------------------");
+    NSLog(@"request.url = %@", request.URL);
     
     NSURLSession *session = [NSURLSession sharedSession];
     
     dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"------------------- http request will finish -------------------");
         if (error == nil) {
             NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
             long httpStatusCode = [httpResponse statusCode];
@@ -49,6 +52,9 @@
     
     [dataTask resume];
     dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    NSLog(@"request.status = %ld", httpResult.statusCode);
+//    NSLog(@"request.response = %@", httpResult.data);
+    NSLog(@"------------------- http request did finish -------------------");
 
     return httpResult;
 }

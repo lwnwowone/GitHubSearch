@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) HttpClient *httpClient;
 
--(ActionResult<GitSearchAPIDataMeta *> *)searchWithKeyWord:(NSString *)keyWord;
 -(ActionResult<GitSearchAPIDataMeta *> *)searchWithKeyWord:(NSString *)keyWord page:(int)index;
 
 @end

@@ -16,12 +16,12 @@
     if(jsonDic && [jsonDic isKindOfClass:[NSDictionary class]]){
         if([jsonDic.allKeys containsObject:@"id"]
            && [jsonDic.allKeys containsObject:@"stargazers_count"]
-           && [jsonDic.allKeys containsObject:@"name"]
+           && [jsonDic.allKeys containsObject:@"full_name"]
            && [jsonDic.allKeys containsObject:@"language"]
            && [jsonDic.allKeys containsObject:@"html_url"]){
             _itemID = [jsonDic[@"id"] longValue];
             _starCount = [jsonDic[@"stargazers_count"] longValue];
-            _name = jsonDic[@"name"];
+            _name = jsonDic[@"full_name"];
             _language = jsonDic[@"language"];
             _projectHome = jsonDic[@"html_url"];
             result.isSucceeded = true;

@@ -20,14 +20,11 @@
     return self;
 }
 
--(ActionResult<GitSearchAPIDataMeta *> *)searchWithKeyWord:(NSString *)keyWord{
-    return [self searchWithKeyWord:keyWord page:1];
-}
-
 -(ActionResult<GitSearchAPIDataMeta *> *)searchWithKeyWord:(NSString *)keyWord page:(int)index{
     ActionResult<GitSearchAPIDataMeta *> *searchResult = [ActionResult new];
     
     NSDictionary *queryDic = @{@"q":keyWord,
+                               @"page":[NSString stringWithFormat:@"%d", index],
                                @"per_page":[NSString stringWithFormat:@"%d", PER_PAGE_CONT]};
     NSString *requestURLString = [NSString stringWithFormat:@"%@/%@", GITHUB_API_HOST, GITHUB_SEARCH_REPO_API_PATH];
     
