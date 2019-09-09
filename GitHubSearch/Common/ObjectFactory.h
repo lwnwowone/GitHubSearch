@@ -6,10 +6,11 @@
 //  Copyright © 2019 刘文楠. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ObjectFactory : NSObject
 
 +(id)objectForProtocols:(NSArray<Protocol *> *)protocols;
++(UIView *)viewForProtocols:(NSArray<Protocol *> *)protocols;
 
 @end
