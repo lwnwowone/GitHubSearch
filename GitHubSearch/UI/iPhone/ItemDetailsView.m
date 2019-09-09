@@ -37,6 +37,7 @@
     [self addSubview:_lbLanguage];
     
     _btnOpenProjectHome = [UIButton new];
+    _btnOpenProjectHome.accessibilityIdentifier = @"btn_project_home";
     [_btnOpenProjectHome setTitle:@"Project Home" forState:UIControlStateNormal];
     [_btnOpenProjectHome setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [_btnOpenProjectHome setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
