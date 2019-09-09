@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "ViewUtil.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,10 @@
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:homeVC];
     self.window.rootViewController = navC;
     [self.window makeKeyAndVisible];
+    
+    float statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    float navBarHeight = navC.navigationBar.bounds.size.height;
+    [ViewUtil setTopBarHeight:statusBarHeight + navBarHeight];
     
     return YES;
 }

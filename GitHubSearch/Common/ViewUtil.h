@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+static float topBarHeight = 0;
+
 @interface ViewUtil : NSObject
 
 +(void)showAlertAtController:(UIViewController *)vc
                        title:(NSString *)title
                      message:(NSString *)message;
+
++(void)setTopBarHeight:(float)height;
+
++(float)topBarHeight;
 
 @end

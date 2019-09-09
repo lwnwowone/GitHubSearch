@@ -8,8 +8,8 @@
 
 #import "HomeView.h"
 #import "BottomIndexView.h"
+#import "ViewUtil.h"
 
-#define TOP_BAR_HEIGHT 64
 #define ITEM_PADDING 10
 #define ITEM_INSIDE_PADDING 10
 #define SEARCH_FILED_HEIGHT 30
@@ -88,6 +88,10 @@
     }
 }
 
+-(void)hideKeyboard{
+    [_tfSearch resignFirstResponder];
+}
+
 -(void)textChanged{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(triggerTextChangedEvent) object:nil];
     [self performSelector:@selector(triggerTextChangedEvent) withObject:nil afterDelay:EVENT_TRIGGER_DELY];
@@ -101,13 +105,13 @@
 
 -(void)layoutSubviews{
     _indicator.frame = CGRectMake(self.bounds.size.width - ITEM_PADDING - SEARCH_FILED_HEIGHT,
-                                  ITEM_PADDING + TOP_BAR_HEIGHT,
+                                  ITEM_PADDING + [ViewUtil topBarHeight],
                                   SEARCH_FILED_HEIGHT,
                                   SEARCH_FILED_HEIGHT);
     
     float searchBoxWidth = self.bounds.size.width - ITEM_PADDING - SEARCH_FILED_HEIGHT - ITEM_INSIDE_PADDING;
     _tfSearch.frame = CGRectMake(ITEM_PADDING,
-                                 ITEM_PADDING + TOP_BAR_HEIGHT,
+                                 ITEM_PADDING + [ViewUtil topBarHeight],
                                  searchBoxWidth,
                                  SEARCH_FILED_HEIGHT);
     

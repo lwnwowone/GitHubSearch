@@ -7,8 +7,8 @@
 //
 
 #import "ItemDetailsView.h"
+#import "ViewUtil.h"
 
-#define TOP_BAR_HEIGHT 64
 #define ITEM_PADDING 10
 #define ITEM_INSIDE_PADDING 10
 
@@ -57,7 +57,7 @@
 -(void)layoutSubviews{
     float tfHeight = 50;
     float itemWidth = self.bounds.size.width - 2 * ITEM_PADDING;
-    _lbName.frame = CGRectMake(ITEM_PADDING, TOP_BAR_HEIGHT, itemWidth, tfHeight);
+    _lbName.frame = CGRectMake(ITEM_PADDING, [ViewUtil topBarHeight], itemWidth, tfHeight);
     _lbID.frame = CGRectMake(ITEM_PADDING, CGRectGetMaxY(_lbName.frame) + ITEM_INSIDE_PADDING, itemWidth, tfHeight);
     _lsStartCount.frame = CGRectMake(ITEM_PADDING, CGRectGetMaxY(_lbID.frame) + ITEM_INSIDE_PADDING, itemWidth, tfHeight);
     _lbLanguage.frame = CGRectMake(ITEM_PADDING, CGRectGetMaxY(_lsStartCount.frame) + ITEM_INSIDE_PADDING, itemWidth, tfHeight);
