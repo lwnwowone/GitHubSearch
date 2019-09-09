@@ -17,6 +17,8 @@
 //Event for user search operation
 @property (nonatomic, copy) void(^textChangedEvent)(int page, NSString *text);
 
+-(void)hideKeyboard;
+
 //Search animation
 -(void)beginSearch;
 -(void)searchDone;

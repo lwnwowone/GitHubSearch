@@ -18,6 +18,8 @@
 
 @property (nonatomic, copy) void(^textChangedEvent)(int page, NSString *text);
 
+-(void)hideKeyboard;
+
 -(void)beginSearch;
 -(void)searchDone;
 

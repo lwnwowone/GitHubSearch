@@ -6,5 +6,5 @@
 //  Copyright © 2019 刘文楠. All rights reserved.
 //
 
-#define PER_PAGE_CONT 10
+#define PER_PAGE_CONT 20
 

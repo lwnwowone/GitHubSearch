@@ -120,4 +120,8 @@
     [self.navigationController pushViewController:itemVC animated:true];
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [_homeView hideKeyboard];
+}
+
 @end

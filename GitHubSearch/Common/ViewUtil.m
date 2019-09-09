@@ -22,4 +22,12 @@
     [vc presentViewController:alertController animated:YES completion:nil];
 }
 
++(void)setTopBarHeight:(float)height{
+    topBarHeight = height;
+}
+
++(float)topBarHeight{
+    return topBarHeight;
+}
+
 @end
